@@ -5,7 +5,8 @@
           box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100vh;
   overflow-x: hidden;
   font-size: 16px;
@@ -302,6 +303,39 @@ section {
   font-size: 3rem;
 }
 
+.countdown-wrapper .countdown {
+  font-size: 3rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.countdown-wrapper .countdown span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  color: #ebb566;
+}
+
+.countdown-wrapper .countdown span:not(:last-child):after {
+  content: ':';
+  position: absolute;
+  right: -5px;
+}
+
+.countdown-wrapper .countdown-attributes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.countdown-wrapper .countdown-attributes span {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+}
+
 .ms-info p {
   line-height: 0.75em;
 }
@@ -335,9 +369,13 @@ section {
   color: #ebb566;
 }
 
-.ms-thanks .ms-title {
+.ms-countdown .ms-title {
   font-size: 4rem;
   color: #d4b6ac;
+}
+
+.ms-countdown h3 {
+  font-weight: bold;
 }
 
 .ms-location-details .location-info span {
