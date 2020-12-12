@@ -1,0 +1,354 @@
+
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,900,700italic,700,600italic,600,400italic);
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Titillium Web', cursive;
+  margin: 0 auto;
+  background: linear-gradient(0deg, #38102a 0%, #5c153d 100%);
+  background-attachment: fixed;
+  color: #d4b6ac;  
+}
+
+.container {
+  max-width: 600px !important;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.section-wrapper {
+  overflow: scroll;
+  height: 100vh;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+  background: url('../images/design-elem-2.svg');
+  background-attachment: fixed;
+  background-position: center -45px;
+}
+
+@keyframes rotate {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+.design-elem {
+    content: url('../images/design-elem-1.svg');
+    position: fixed;
+    transform: rotate(0deg);
+    z-index: 1;
+    animation: rotate 25s linear infinite;
+    &.left {
+      left: -85%;
+      top: -30%;
+      // left: 0;
+      // right: 0;
+      // margin: 0 auto;
+      // top: -50%;
+    }
+    &.right {
+      right: -85%;
+      bottom: -30%;
+      // left: 0;
+      // right: 0;
+      // margin: 0 auto;
+      // bottom: -50%;
+    }
+}
+
+section {
+  padding: 1rem;
+  height: 100vh;
+  scroll-snap-align: start;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+
+.ms-landing {
+  align-items: center;
+  padding: 2rem;
+  .row {
+    transform: translateY(-12%);
+  }
+  img {
+    width: 230px;
+  }
+  h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin: 0.75rem 0;
+  }
+  p {
+    margin: 0;
+    line-height: 1em;
+    &:nth-of-type(1) {
+      font-size: 2rem;
+    }
+    &:nth-of-type(2) {
+      font-size: 3.25rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.ms-bio {
+  .row {
+    display: flex;
+    flex-flow: column;
+    .ms-card {
+      flex-basis: 70%;
+      max-width: 70%;
+      padding: 2.5rem 1rem;
+      box-sizing: border-box;
+      &:nth-child(1) {
+        margin-left: 30%;
+        &:after {
+          content: url('../images/bride.png');
+          position: absolute;
+          left: -65%;
+          bottom: 20px;
+          transform: scale(0.35);
+          transform-origin: bottom;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
+      }
+      &:nth-child(2) {
+        margin-right: 30%;
+        &:after {
+          content: url('../images/groom.png');
+          position: absolute;
+          right: -65%;
+          top: -20px;
+          transform: scale(0.35);
+          transform-origin: top;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.ms-event-details {
+  .row {
+    display: flex;
+    flex-flow: column;
+    .ms-card {
+      flex-basis: 70%;
+      max-width: 70%;
+      padding: 2.5rem 1rem;
+      box-sizing: border-box;
+      &:nth-child(odd) {
+        margin-left: 30%;
+        &:after {
+          position: absolute;
+          left: -55%;
+          top: 80px;
+          transform: scale(0.35);
+          transform-origin: top;
+        }
+      }
+      &:nth-child(even) {
+        margin-right: 30%;
+        &:after {
+          position: absolute;
+          right: -55%;
+          top: 40px;
+          transform: scale(0.35);
+          transform-origin: top;
+        }
+      }
+    }
+  }
+}
+
+.ms-name {
+  .name-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    span {
+      font-family: 'Great Vibes', cursive;
+      font-size: 5.5rem;
+      line-height: 1;
+      display: inline-flex;
+      color: #ebb566;
+      &:nth-child(1) {
+        // transform: translateY(-50%);
+        // align-items: flex-end;
+      }
+      &:nth-child(2) {
+        font-size: 3rem;
+        color: #d4b6ac;
+        transform: translate(80px, 75px);
+        position: absolute;
+      }
+      &:nth-child(3) {
+        // transform: translateY(50%);
+        // align-items: flex-start;
+      }
+    }
+  }
+  .invite-wrapper {
+    p {
+      margin: 0;
+      line-height: 1.2;
+      &:nth-child(1) {
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+      &:nth-child(2) {
+        font-size: 1.45rem;
+      }
+      &:nth-child(3) {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.ms-date {
+  .ms-title {
+    font-size: 3rem;
+  }
+}
+
+.ms-info {
+  p {
+    line-height: 0.75em;
+    &:nth-child(1) {
+      font-size: 1.65rem;
+    }
+    &:nth-child(2) {
+      font-size: 4.5rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #ebb566;
+    }
+    &:nth-child(3) {
+      font-size: 2.5rem;
+    }
+    &:nth-child(4) {
+      font-size: 3.65rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #ebb566;
+    }
+    &:nth-child(5) {
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #ebb566;
+    }
+  }
+}
+
+.ms-thanks {
+  .ms-title {
+    font-size: 4rem;
+  }
+}
+
+// .ms-event-details {
+//   background-color: rgba(27,26,29,1);
+// }
+
+.ms-location-details {
+  // background-color: rgba(27,26,29,1);
+  .location-info {
+    span {
+      padding: 10px;
+      img {
+        width: 24px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.ms-title {
+  font-family: 'Great Vibes', cursive;
+  color: #ebb566;
+}
+
+@media screen and (min-width: 400px) { 
+  .design-elem {
+    &.left {
+      left: -70%;
+    }
+    &.right {
+      right: -70%;
+    }
+  }
+}
+
+@media screen and (min-width: 576px) { 
+  .design-elem {
+    &.left {
+      left: -30%;
+    }
+    &.right {
+      right: -30%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) { 
+  .design-elem {
+    &.left {
+      left: -20%;
+      top: -20%;
+    }
+    &.right {
+      right: -20%;
+      bottom: -20%;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) { 
+  html {
+    font-size: 24px;
+  }
+  .design-elem {
+    &.left {
+      left: -10%;
+      top: -10%;
+    }
+    &.right {
+      right: -10%;
+      bottom: -10%;
+    }
+  }
+  .ms-name {
+    .name-wrapper {
+      span {
+        &:nth-child(2) {
+          transform: translate(120px, 110px);
+        }
+      }
+    }
+}
+}
+

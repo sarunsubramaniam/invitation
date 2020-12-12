@@ -1,0 +1,402 @@
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,900,700italic,700,600italic,600,400italic);
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Titillium Web', cursive;
+  margin: 0 auto;
+  background: -webkit-gradient(linear, left bottom, left top, from(#38102a), to(#5c153d));
+  background: linear-gradient(0deg, #38102a 0%, #5c153d 100%);
+  background-attachment: fixed;
+  color: #d4b6ac;
+}
+
+.container {
+  max-width: 600px !important;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.section-wrapper {
+  overflow: scroll;
+  height: 100vh;
+  -ms-scroll-snap-type: mandatory;
+      scroll-snap-type: mandatory;
+  -ms-scroll-snap-points-y: repeat(100vh);
+      scroll-snap-points-y: repeat(100vh);
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  background: url("../images/design-elem-2.svg");
+  background-attachment: fixed;
+  background-position: center -45px;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.design-elem {
+  content: url("../images/design-elem-1.svg");
+  position: fixed;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  z-index: 1;
+  -webkit-animation: rotate 25s linear infinite;
+          animation: rotate 25s linear infinite;
+}
+
+.design-elem.left {
+  left: -85%;
+  top: -30%;
+}
+
+.design-elem.right {
+  right: -85%;
+  bottom: -30%;
+}
+
+section {
+  padding: 1rem;
+  height: 100vh;
+  scroll-snap-align: start;
+  text-align: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ms-landing {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+.ms-landing .row {
+  -webkit-transform: translateY(-12%);
+          transform: translateY(-12%);
+}
+
+.ms-landing img {
+  width: 230px;
+}
+
+.ms-landing h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  margin: 0.75rem 0;
+}
+
+.ms-landing p {
+  margin: 0;
+  line-height: 1em;
+}
+
+.ms-landing p:nth-of-type(1) {
+  font-size: 2rem;
+}
+
+.ms-landing p:nth-of-type(2) {
+  font-size: 3.25rem;
+  font-weight: bold;
+}
+
+.ms-bio .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.ms-bio .row .ms-card {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  max-width: 70%;
+  padding: 2.5rem 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.ms-bio .row .ms-card:nth-child(1) {
+  margin-left: 30%;
+}
+
+.ms-bio .row .ms-card:nth-child(1):after {
+  content: url("../images/bride.png");
+  position: absolute;
+  left: -65%;
+  bottom: 20px;
+  -webkit-transform: scale(0.35);
+          transform: scale(0.35);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.ms-bio .row .ms-card:nth-child(2) {
+  margin-right: 30%;
+}
+
+.ms-bio .row .ms-card:nth-child(2):after {
+  content: url("../images/groom.png");
+  position: absolute;
+  right: -65%;
+  top: -20px;
+  -webkit-transform: scale(0.35);
+          transform: scale(0.35);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.ms-event-details .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.ms-event-details .row .ms-card {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  max-width: 70%;
+  padding: 2.5rem 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.ms-event-details .row .ms-card:nth-child(odd) {
+  margin-left: 30%;
+}
+
+.ms-event-details .row .ms-card:nth-child(odd):after {
+  position: absolute;
+  left: -55%;
+  top: 80px;
+  -webkit-transform: scale(0.35);
+          transform: scale(0.35);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.ms-event-details .row .ms-card:nth-child(even) {
+  margin-right: 30%;
+}
+
+.ms-event-details .row .ms-card:nth-child(even):after {
+  position: absolute;
+  right: -55%;
+  top: 40px;
+  -webkit-transform: scale(0.35);
+          transform: scale(0.35);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.ms-name .name-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.ms-name .name-wrapper span {
+  font-family: 'Great Vibes', cursive;
+  font-size: 5.5rem;
+  line-height: 1;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: #ebb566;
+}
+
+.ms-name .name-wrapper span:nth-child(2) {
+  font-size: 3rem;
+  color: #d4b6ac;
+  -webkit-transform: translate(80px, 75px);
+          transform: translate(80px, 75px);
+  position: absolute;
+}
+
+.ms-name .invite-wrapper p {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.ms-name .invite-wrapper p:nth-child(1) {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.ms-name .invite-wrapper p:nth-child(2) {
+  font-size: 1.45rem;
+}
+
+.ms-name .invite-wrapper p:nth-child(3) {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.ms-date .ms-title {
+  font-size: 3rem;
+}
+
+.ms-info p {
+  line-height: 0.75em;
+}
+
+.ms-info p:nth-child(1) {
+  font-size: 1.65rem;
+}
+
+.ms-info p:nth-child(2) {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ebb566;
+}
+
+.ms-info p:nth-child(3) {
+  font-size: 2.5rem;
+}
+
+.ms-info p:nth-child(4) {
+  font-size: 3.65rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ebb566;
+}
+
+.ms-info p:nth-child(5) {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ebb566;
+}
+
+.ms-thanks .ms-title {
+  font-size: 4rem;
+}
+
+.ms-location-details .location-info span {
+  padding: 10px;
+}
+
+.ms-location-details .location-info span img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+.ms-title {
+  font-family: 'Great Vibes', cursive;
+  color: #ebb566;
+}
+
+@media screen and (min-width: 400px) {
+  .design-elem.left {
+    left: -70%;
+  }
+  .design-elem.right {
+    right: -70%;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .design-elem.left {
+    left: -30%;
+  }
+  .design-elem.right {
+    right: -30%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .design-elem.left {
+    left: -20%;
+    top: -20%;
+  }
+  .design-elem.right {
+    right: -20%;
+    bottom: -20%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 24px;
+  }
+  .design-elem.left {
+    left: -10%;
+    top: -10%;
+  }
+  .design-elem.right {
+    right: -10%;
+    bottom: -10%;
+  }
+  .ms-name .name-wrapper span:nth-child(2) {
+    -webkit-transform: translate(120px, 110px);
+            transform: translate(120px, 110px);
+  }
+}
+/*# sourceMappingURL=stylesheet.css.map */
