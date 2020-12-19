@@ -1,7 +1,16 @@
 $(document).ready(function () {
-    $(function () {
-        AOS.init();
-    });
+    
+    AOS.init({
+        duration: 1200,
+      });
+
+      $(function() {
+        $.scrollify({
+          section : "section",
+        });
+      });
+
+
     // Set the date we're counting down to
     var countDownDate = new Date("Feb 4, 2021 12:00:00").getTime();
 
@@ -14,7 +23,7 @@ $(document).ready(function () {
         // Find the distance between now and the count down date
         var distance = countDownDate - now;
 
-        console.log(distance);
+        // console.log(distance);
 
         // Time calculations for days, hours, minutes and seconds
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));

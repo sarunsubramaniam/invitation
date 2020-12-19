@@ -7,7 +7,7 @@
 
 html,
 body {
-  height: 100vh;
+  // height: 100vh;
   overflow-x: hidden;
   font-size: 16px;
 }
@@ -15,9 +15,10 @@ body {
 body {
   font-family: 'Titillium Web', cursive;
   margin: 0 auto;
-  background: linear-gradient(0deg, #38102a 0%, #5c153d 100%);
+  // background: linear-gradient(0deg, #38102a 0%, #5c153d 100%);
+  background-color: #05ABAA;
   background-attachment: fixed;
-  color: #d4b6ac;
+  color: #4C081B;
 }
 
 .container {
@@ -29,14 +30,18 @@ p {
 }
 
 .section-wrapper {
-  overflow: scroll;
-  height: 100vh;
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y mandatory;
-  background: url('../images/design-elem-2.svg');
-  background-attachment: fixed;
-  background-position: center -45px;
+  &:before {
+    content: '';
+    background-image: url('../images/design-elem-2.svg');
+    background-position: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    opacity: 0.5;
+  }
+
 }
 
 @keyframes rotate {
@@ -50,53 +55,65 @@ p {
 }
 
 .design-elem {
-  content: url('../images/design-elem-1.svg');
   position: fixed;
   transform: rotate(0deg);
   z-index: 1;
-  animation: rotate 25s linear infinite;
+  // animation: rotate 25s linear infinite;
 
   &.left {
-    left: -85%;
-    top: -30%;
-    // left: 0;
-    // right: 0;
-    // margin: 0 auto;
-    // top: -50%;
+    left: 0;
+    margin: 0 auto;
+    top: 0;
+    max-width: 100%;
+    transform: scale(0.5);
+    transform-origin: top left;
+    content: url('../images/design-elem-1.svg');
   }
 
   &.right {
-    right: -85%;
-    bottom: -30%;
-    // left: 0;
-    // right: 0;
-    // margin: 0 auto;
-    // bottom: -50%;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+    max-width: 100%;
+    transform: scale(0.5);
+    transform-origin: bottom right;
+    content: url('../images/design-elem-3.svg');
   }
 }
 
 section {
-  padding: 1rem;
-  height: 100vh;
-  scroll-snap-align: start;
   text-align: center;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh !important;
 }
 
 
 .ms-landing {
-  align-items: center;
-  padding: 2rem;
+  align-items: flex-start;
+  padding: 0 2rem 2rem 2rem;
+  @keyframes swing {
+    0% {
+      transform: perspective(50cm) rotateX(-5deg);
+    }
+  
+    50% {
+      transform: perspective(50cm) rotateX(0deg);
+    }
 
-  .row {
-    transform: translateY(-12%);
+    100% {
+      transform: perspective(50cm) rotateX(-5deg);
+    }
   }
 
   img {
-    width: 230px;
+    // width: 230px;
+    animation: swing 2s ease-in-out infinite;
+    margin-top: -60px;
+    transform-origin: top;
+    // height: 600px;
   }
 
   h2 {
@@ -121,84 +138,118 @@ section {
 }
 
 .ms-bio {
-  .row {
-    display: flex;
-    flex-flow: column;
-
+  position: relative;
     .ms-card {
-      flex-basis: 70%;
-      max-width: 70%;
-      padding: 2.5rem 1rem;
-      box-sizing: border-box;
-
-      &:nth-child(1) {
-        margin-left: 30%;
-
-        &:after {
-          content: url('../images/bride.png');
-          position: absolute;
-          left: -65%;
-          bottom: 20px;
-          transform: scale(0.35);
-          transform-origin: bottom;
+      padding: 0;
+      .hide {
+        visibility: hidden;
+      }
+      ul {
+        padding-left: 0;
+        li {
+          list-style: none;
+          font-size: 13px;
+          min-height: 65px;
           display: flex;
           justify-content: center;
-          width: 100%;
+          align-items: center;
+          position: relative;
         }
       }
-
+      &:nth-child(1) {
+        ul {
+          li {
+            justify-content: flex-end;
+            text-align: right;
+          }
+        }
+      }
+      &:nth-child(3) {
+        ul {
+          li {
+            justify-content: flex-start;
+            text-align: left;
+          }
+        }
+      }
       &:nth-child(2) {
-        margin-right: 30%;
-
-        &:after {
-          content: url('../images/groom.png');
-          position: absolute;
-          right: -65%;
-          top: -20px;
-          transform: scale(0.35);
-          transform-origin: top;
-          display: flex;
-          justify-content: center;
-          width: 100%;
+        ul {
+          li:before {
+            position: absolute;
+            font-size: 24px;
+            font-weight: bold;
+            opacity: 0.075;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            color: #000;
+            line-height: 1em;
+          }
+          li:nth-child(1):before {
+            content: 'NATIVE';
+          }
+          li:nth-child(2):before {
+            content: 'LANDMARK';
+          }
+          li:nth-child(3):before {
+            content: 'HOBBIES';
+          }
+          li:nth-child(4):before {
+            content: 'COUSIN LADDER';
+          }
+          li:nth-child(5):before {
+            content: 'PLAYLIST';
+          }
+          li:nth-child(6):before {
+            content: 'FAVOURITE STAR';
+          }
+          li:nth-child(7):before {
+            content: 'SURVIVAL SKILLS';
+          }
         }
       }
     }
+}
+
+.ms-story {
+  p {
+    font-size: 0.875rem;
+  }
+  p.ms-title {
+    font-size: 1.75rem;
+    // color: #ebb566;
   }
 }
 
 .ms-event-details {
+  display: flex;
+  flex-direction: column;
   .row {
     display: flex;
-    flex-flow: column;
-
-    .ms-card {
-      flex-basis: 70%;
-      max-width: 70%;
-      padding: 2.5rem 1rem;
-      box-sizing: border-box;
-
-      &:nth-child(odd) {
-        margin-left: 30%;
-
-        &:after {
-          position: absolute;
-          left: -55%;
-          top: 80px;
-          transform: scale(0.35);
-          transform-origin: top;
-        }
-      }
-
-      &:nth-child(even) {
-        margin-right: 30%;
-
-        &:after {
-          position: absolute;
-          right: -55%;
-          top: 40px;
-          transform: scale(0.35);
-          transform-origin: top;
-        }
+    & > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    p {
+      font-size: 0.875rem;
+      text-align: justify;
+    }
+    img {
+      width: 100px;
+    }
+    i {
+      font-size: 0.75rem;
+    }
+    h2 {
+      text-align: left;
+      span {
+        font-family: 'Titillium Web', cursive;
+        font-size: 0.875rem;
+        display: flex;
+        color: #4C081B;
+        font-weight: 700;
       }
     }
   }
@@ -210,50 +261,20 @@ section {
     flex-direction: column;
     align-items: center;
     position: relative;
+    padding: 1rem;
 
     span {
       font-family: 'Great Vibes', cursive;
-      font-size: 5.5rem;
+      font-size: 5rem;
       line-height: 1;
       display: inline-flex;
-      color: #ebb566;
-
-      &:nth-child(1) {
-        // transform: translateY(-50%);
-        // align-items: flex-end;
-      }
+      color: #F8076E;
 
       &:nth-child(2) {
-        font-size: 3rem;
-        color: #d4b6ac;
-        transform: translate(80px, 75px);
-        position: absolute;
-      }
-
-      &:nth-child(3) {
-        // transform: translateY(50%);
-        // align-items: flex-start;
-      }
-    }
-  }
-
-  .invite-wrapper {
-    p {
-      margin: 0;
-      line-height: 1.2;
-
-      &:nth-child(1) {
         font-size: 2.5rem;
-        font-weight: bold;
-      }
-
-      &:nth-child(2) {
-        font-size: 1.45rem;
-      }
-
-      &:nth-child(3) {
-        font-size: 2rem;
-        font-weight: bold;
+        color: #ebb566;
+        transform: translate(75px, 70px);
+        position: absolute;
       }
     }
   }
@@ -262,6 +283,23 @@ section {
 .ms-date {
   .ms-title {
     font-size: 3rem;
+  }
+  .invite-wrapper {
+    p {
+      line-height: 1.5;
+      text-transform: uppercase;
+
+    }
+  }
+  .location-info {
+    span {
+      padding: 10px;
+
+      img {
+        width: 24px;
+        margin-right: 10px;
+      }
+    }
   }
 }
 
@@ -287,9 +325,6 @@ section {
     display: flex;
     span {
       flex-basis: 25%;
-      &:not(:last-child) {
-        // margin-right: 20px;
-      }
     }
   }
 }
@@ -332,90 +367,33 @@ section {
 .ms-countdown {
   .ms-title {
     font-size: 4rem;
-    color: #d4b6ac;
+    color: #F8076E;
   }
   h3 {
     font-weight: bold;
   }
 }
 
-// .ms-event-details {
-//   background-color: rgba(27,26,29,1);
-// }
-
-.ms-location-details {
-
-  // background-color: rgba(27,26,29,1);
-  .location-info {
-    span {
-      padding: 10px;
-
-      img {
-        width: 24px;
-        margin-right: 10px;
-      }
-    }
-  }
-}
-
 .ms-title {
   font-family: 'Great Vibes', cursive;
-  color: #ebb566;
+  color: #F8076E;
 }
 
 @media screen and (min-width: 400px) {
-  .design-elem {
-    &.left {
-      left: -70%;
-    }
-
-    &.right {
-      right: -70%;
-    }
-  }
+  
 }
 
 @media screen and (min-width: 576px) {
-  .design-elem {
-    &.left {
-      left: -30%;
-    }
 
-    &.right {
-      right: -30%;
-    }
-  }
 }
 
 @media screen and (min-width: 768px) {
-  .design-elem {
-    &.left {
-      left: -20%;
-      top: -20%;
-    }
 
-    &.right {
-      right: -20%;
-      bottom: -20%;
-    }
-  }
 }
 
 @media screen and (min-width: 992px) {
   html {
-    font-size: 24px;
-  }
-
-  .design-elem {
-    &.left {
-      left: -10%;
-      top: -10%;
-    }
-
-    &.right {
-      right: -10%;
-      bottom: -10%;
-    }
+    font-size: 18px;
   }
 
   .ms-name {
