@@ -138,9 +138,18 @@ section {
 }
 
 .ms-bio {
-  position: relative;
+  .row {
+    position: relative;
     .ms-card {
-      padding: 0;
+      padding: 0 0.35rem;
+      box-sizing: border-box;
+      &.category {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
       .hide {
         visibility: hidden;
       }
@@ -148,7 +157,7 @@ section {
         padding-left: 0;
         li {
           list-style: none;
-          font-size: 13px;
+          font-size: 0.875rem;
           min-height: 65px;
           display: flex;
           justify-content: center;
@@ -176,9 +185,10 @@ section {
         ul {
           li:before {
             position: absolute;
-            font-size: 24px;
+            font-size: 2rem;
             font-weight: bold;
-            opacity: 0.075;
+            opacity: 0.1;
+            top: -15px;
             left: 0;
             right: 0;
             display: flex;
@@ -210,6 +220,7 @@ section {
         }
       }
     }
+  }
 }
 
 .ms-story {
@@ -234,7 +245,7 @@ section {
     }
     p {
       font-size: 0.875rem;
-      text-align: justify;
+      text-align: left;
     }
     img {
       width: 100px;

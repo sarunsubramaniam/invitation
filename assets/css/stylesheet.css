@@ -172,25 +172,35 @@ section {
   font-weight: bold;
 }
 
-.ms-bio {
+.ms-bio .row {
   position: relative;
 }
 
-.ms-bio .ms-card {
-  padding: 0;
+.ms-bio .row .ms-card {
+  padding: 0 0.35rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.ms-bio .ms-card .hide {
+.ms-bio .row .ms-card.category {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.ms-bio .row .ms-card .hide {
   visibility: hidden;
 }
 
-.ms-bio .ms-card ul {
+.ms-bio .row .ms-card ul {
   padding-left: 0;
 }
 
-.ms-bio .ms-card ul li {
+.ms-bio .row .ms-card ul li {
   list-style: none;
-  font-size: 13px;
+  font-size: 0.875rem;
   min-height: 65px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,25 +214,26 @@ section {
   position: relative;
 }
 
-.ms-bio .ms-card:nth-child(1) ul li {
+.ms-bio .row .ms-card:nth-child(1) ul li {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   text-align: right;
 }
 
-.ms-bio .ms-card:nth-child(3) ul li {
+.ms-bio .row .ms-card:nth-child(3) ul li {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   text-align: left;
 }
 
-.ms-bio .ms-card:nth-child(2) ul li:before {
+.ms-bio .row .ms-card:nth-child(2) ul li:before {
   position: absolute;
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: bold;
-  opacity: 0.075;
+  opacity: 0.1;
+  top: -15px;
   left: 0;
   right: 0;
   display: -webkit-box;
@@ -235,31 +246,31 @@ section {
   line-height: 1em;
 }
 
-.ms-bio .ms-card:nth-child(2) ul li:nth-child(1):before {
+.ms-bio .row .ms-card:nth-child(2) ul li:nth-child(1):before {
   content: 'NATIVE';
 }
 
-.ms-bio .ms-card:nth-child(2) ul li:nth-child(2):before {
+.ms-bio .row .ms-card:nth-child(2) ul li:nth-child(2):before {
   content: 'LANDMARK';
 }
 
-.ms-bio .ms-card:nth-child(2) ul li:nth-child(3):before {
+.ms-bio .row .ms-card:nth-child(2) ul li:nth-child(3):before {
   content: 'HOBBIES';
 }
 
-.ms-bio .ms-card:nth-child(2) ul li:nth-child(4):before {
+.ms-bio .row .ms-card:nth-child(2) ul li:nth-child(4):before {
   content: 'COUSIN LADDER';
 }
 
-.ms-bio .ms-card:nth-child(2) ul li:nth-child(5):before {
+.ms-bio .row .ms-card:nth-child(2) ul li:nth-child(5):before {
   content: 'PLAYLIST';
 }
 
-.ms-bio .ms-card:nth-child(2) ul li:nth-child(6):before {
+.ms-bio .row .ms-card:nth-child(2) ul li:nth-child(6):before {
   content: 'FAVOURITE STAR';
 }
 
-.ms-bio .ms-card:nth-child(2) ul li:nth-child(7):before {
+.ms-bio .row .ms-card:nth-child(2) ul li:nth-child(7):before {
   content: 'SURVIVAL SKILLS';
 }
 
@@ -302,7 +313,7 @@ section {
 
 .ms-event-details .row p {
   font-size: 0.875rem;
-  text-align: justify;
+  text-align: left;
 }
 
 .ms-event-details .row img {
