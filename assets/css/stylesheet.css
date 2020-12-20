@@ -482,6 +482,12 @@ section {
   text-transform: uppercase;
 }
 
+.ms-date .date-info h2 {
+  font-weight: 600;
+  color: #ebb566;
+  text-shadow: 1px 1px #642920;
+}
+
 .ms-date .location-info span {
   padding: 10px;
 }
