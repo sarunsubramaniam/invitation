@@ -384,7 +384,6 @@ section {
     p {
       line-height: 1.5;
       text-transform: uppercase;
-
     }
   }
   .location-info {
@@ -408,6 +407,7 @@ section {
       flex: 1;
       position: relative;
       color: #ebb566;
+      text-shadow: 1px 1px #642920;
       &:not(:last-child) {
         &:after {
           content: ':';
@@ -438,6 +438,7 @@ section {
       text-transform: uppercase;
       font-weight: bold;
       color: #ebb566;
+      text-shadow: 1px 1px #642920;
     }
 
     &:nth-child(3) {
@@ -449,6 +450,7 @@ section {
       font-weight: bold;
       text-transform: uppercase;
       color: #ebb566;
+      text-shadow: 1px 1px #642920;
     }
 
     &:nth-child(5) {
@@ -456,6 +458,7 @@ section {
       font-weight: bold;
       text-transform: uppercase;
       color: #ebb566;
+      text-shadow: 1px 1px #642920;
     }
   }
 }
