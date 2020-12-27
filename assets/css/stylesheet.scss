@@ -16,9 +16,9 @@ body {
   font-family: 'Titillium Web', cursive;
   margin: 0 auto;
   // background: linear-gradient(0deg, #38102a 0%, #5c153d 100%);
-  background-color: #05ABAA;
+  background-color: #52175b;
   background-attachment: fixed;
-  color: #4C081B;
+  color: #ffffff;
 }
 
 .container {
@@ -39,7 +39,7 @@ p {
     right: 0;
     top:0;
     bottom: 0;
-    opacity: 0.5;
+    opacity: 0.25;
   }
 
 }
@@ -387,12 +387,12 @@ section {
       font-size: 5rem;
       line-height: 1;
       display: inline-flex;
-      color: #F8076E;
+      color: #ffad0e;
       text-shadow: 1px 1px #642920;
 
       &:nth-child(2) {
         font-size: 2.5rem;
-        color: #ebb566;
+        color: #fff;
         transform: translate(75px, 70px);
         position: absolute;
       }
@@ -401,6 +401,9 @@ section {
 }
 
 .ms-date {
+  a {
+    color: #fff;
+  }
   .ms-title {
     font-size: 3rem;
   }
@@ -413,7 +416,7 @@ section {
   .date-info {
     h2 {
       font-weight: 600;
-      color: #ebb566;
+      color: #fff;
       text-shadow: 1px 1px #642920;
     }
   }
@@ -437,7 +440,7 @@ section {
     span {
       flex: 1;
       position: relative;
-      color: #ebb566;
+      color: #ffad0e;
       text-shadow: 1px 1px #642920;
       &:not(:last-child) {
         &:after {
@@ -468,7 +471,7 @@ section {
       font-size: 4.5rem;
       text-transform: uppercase;
       font-weight: bold;
-      color: #ebb566;
+      color: #ffad0e;
       text-shadow: 1px 1px #642920;
     }
 
@@ -480,7 +483,7 @@ section {
       font-size: 3.65rem;
       font-weight: bold;
       text-transform: uppercase;
-      color: #ebb566;
+      color: #ffad0e;
       text-shadow: 1px 1px #642920;
     }
 
@@ -488,7 +491,7 @@ section {
       font-size: 2.5rem;
       font-weight: bold;
       text-transform: uppercase;
-      color: #ebb566;
+      color: #ffad0e;
       text-shadow: 1px 1px #642920;
     }
   }
@@ -497,7 +500,7 @@ section {
 .ms-countdown {
   .ms-title {
     font-size: 4rem;
-    color: #F8076E;
+    color: #05abaa;
   }
   h3 {
     font-weight: bold;
@@ -506,7 +509,11 @@ section {
 
 .ms-title {
   font-family: 'Great Vibes', cursive;
-  color: #F8076E;
+  color: #ffad0e;
+}
+
+.modal-dialog {
+  color: #333;
 }
 
 @media screen and (min-width: 400px) {

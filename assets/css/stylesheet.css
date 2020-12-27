@@ -14,9 +14,9 @@ body {
 body {
   font-family: 'Titillium Web', cursive;
   margin: 0 auto;
-  background-color: #05ABAA;
+  background-color: #52175b;
   background-attachment: fixed;
-  color: #4C081B;
+  color: #ffffff;
 }
 
 .container {
@@ -36,7 +36,7 @@ p {
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: 0.5;
+  opacity: 0.25;
 }
 
 @-webkit-keyframes rotate {
@@ -502,16 +502,20 @@ section {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  color: #F8076E;
+  color: #ffad0e;
   text-shadow: 1px 1px #642920;
 }
 
 .ms-name .name-wrapper span:nth-child(2) {
   font-size: 2.5rem;
-  color: #ebb566;
+  color: #fff;
   -webkit-transform: translate(75px, 70px);
           transform: translate(75px, 70px);
   position: absolute;
+}
+
+.ms-date a {
+  color: #fff;
 }
 
 .ms-date .ms-title {
@@ -525,7 +529,7 @@ section {
 
 .ms-date .date-info h2 {
   font-weight: 600;
-  color: #ebb566;
+  color: #fff;
   text-shadow: 1px 1px #642920;
 }
 
@@ -551,7 +555,7 @@ section {
       -ms-flex: 1;
           flex: 1;
   position: relative;
-  color: #ebb566;
+  color: #ffad0e;
   text-shadow: 1px 1px #642920;
 }
 
@@ -584,7 +588,7 @@ section {
   font-size: 4.5rem;
   text-transform: uppercase;
   font-weight: bold;
-  color: #ebb566;
+  color: #ffad0e;
   text-shadow: 1px 1px #642920;
 }
 
@@ -596,7 +600,7 @@ section {
   font-size: 3.65rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: #ebb566;
+  color: #ffad0e;
   text-shadow: 1px 1px #642920;
 }
 
@@ -604,13 +608,13 @@ section {
   font-size: 2.5rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: #ebb566;
+  color: #ffad0e;
   text-shadow: 1px 1px #642920;
 }
 
 .ms-countdown .ms-title {
   font-size: 4rem;
-  color: #F8076E;
+  color: #05abaa;
 }
 
 .ms-countdown h3 {
@@ -619,7 +623,11 @@ section {
 
 .ms-title {
   font-family: 'Great Vibes', cursive;
-  color: #F8076E;
+  color: #ffad0e;
+}
+
+.modal-dialog {
+  color: #333;
 }
 
 @media screen and (min-width: 992px) {
