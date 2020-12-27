@@ -302,7 +302,7 @@ section {
 }
 
 .ms-event-timeline .ms-events {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .ms-event-timeline .ms-events > .left {
@@ -420,7 +420,7 @@ section {
 }
 
 .ms-event-timeline span {
-  min-height: 80px;
+  min-height: 65px;
   padding: 0.5rem;
 }
 
