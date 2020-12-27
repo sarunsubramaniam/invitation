@@ -90,6 +90,10 @@ section {
   height: 100vh !important;
 }
 
+.modal-title {
+  font-weight: 700;
+}
+
 
 .ms-landing {
   align-items: flex-start;
@@ -236,9 +240,13 @@ section {
 
 .ms-event-timeline {
   position: relative;
-  .row {
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  .ms-events {
     // position: relative;
-    & > div:first-child {
+    margin-top: 50px;
+    & > .left {
       transform: translateY(-8%);
     }
     &:after {
@@ -255,6 +263,7 @@ section {
     }
     .left {
       span {
+        cursor: pointer;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -272,9 +281,13 @@ section {
           z-index: 1;
         }
       }
+      button {
+        justify-content: flex-end;
+      }
     }
     .right {
       span {
+        cursor: pointer;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -292,7 +305,17 @@ section {
           z-index: 1;
         }
       }
+      button {
+        justify-content: flex-start;
+      }
     }
+  }
+  button {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
   }
   img {
     width: 32px;
@@ -304,6 +327,7 @@ section {
   }
   p {
     font-size: 14px;
+    margin: 0;
   }
   .info {
     font-size: 12px;

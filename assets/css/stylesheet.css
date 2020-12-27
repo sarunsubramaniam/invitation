@@ -107,6 +107,10 @@ section {
   height: 100vh !important;
 }
 
+.modal-title {
+  font-weight: 700;
+}
+
 .ms-landing {
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -287,14 +291,26 @@ section {
 
 .ms-event-timeline {
   position: relative;
+  z-index: 9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.ms-event-timeline .row > div:first-child {
+.ms-event-timeline .ms-events {
+  margin-top: 50px;
+}
+
+.ms-event-timeline .ms-events > .left {
   -webkit-transform: translateY(-8%);
           transform: translateY(-8%);
 }
 
-.ms-event-timeline .row:after {
+.ms-event-timeline .ms-events:after {
   content: '';
   position: absolute;
   top: -16px;
@@ -307,7 +323,8 @@ section {
   z-index: -1;
 }
 
-.ms-event-timeline .row .left span {
+.ms-event-timeline .ms-events .left span {
+  cursor: pointer;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -319,7 +336,7 @@ section {
   text-align: right;
 }
 
-.ms-event-timeline .row .left span:after {
+.ms-event-timeline .ms-events .left span:after {
   content: '';
   position: absolute;
   top: 16px;
@@ -332,7 +349,14 @@ section {
   z-index: 1;
 }
 
-.ms-event-timeline .row .right span {
+.ms-event-timeline .ms-events .left button {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.ms-event-timeline .ms-events .right span {
+  cursor: pointer;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -344,7 +368,7 @@ section {
   text-align: left;
 }
 
-.ms-event-timeline .row .right span:after {
+.ms-event-timeline .ms-events .right span:after {
   content: '';
   position: absolute;
   top: 16px;
@@ -355,6 +379,22 @@ section {
   background-color: #f8076e;
   border: 2px solid #fff;
   z-index: 1;
+}
+
+.ms-event-timeline .ms-events .right button {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.ms-event-timeline button {
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .ms-event-timeline img {
@@ -369,6 +409,7 @@ section {
 
 .ms-event-timeline p {
   font-size: 14px;
+  margin: 0;
 }
 
 .ms-event-timeline .info {
