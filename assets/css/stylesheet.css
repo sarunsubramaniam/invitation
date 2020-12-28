@@ -104,7 +104,6 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh !important;
 }
 
 .modal-title {
